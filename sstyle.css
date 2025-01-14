@@ -21,18 +21,6 @@ body{
 .container{
     padding: 10px 10%;
 }
-.dark-box {
-    background-color: #333; /* Dark gray */
-    color: #fff; /* White text */
-    padding: 20px; /* Space inside the box */
-    border-radius: 8px; /* Rounded corners */
-    width: 550px; /* Fixed width (optional) */
-    margin: 20px auto; /* Center the box */
-    margin-right: -100px;
-    display: flex; /* Flexbox layout for horizontal alignment */
-    gap: 5px; /* Spacing between links */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-}
 nav{
     display: flex;
     align-items: center;
@@ -329,6 +317,9 @@ nav .fa-solid{
     #header{
         background-image: url(images/IMG-20250112-WA0001.jpg);
     }
+    .logo{
+        margin-left: -40px;
+    }
     .header-text{
         margin-top: 100%;
         font-size: 16px;
@@ -372,18 +363,6 @@ nav .fa-solid{
     }
     .about-col-2{
         font-size: 14px;
-    }
-    .dark-box {
-        background-color: #ff004f; /* Dark gray background */
-        color: #fff; /* White text */
-        padding: 20px; /* Space inside the box */
-        border-radius: 8px; /* Rounded corners */
-        width: 300px; /* Fixed width */
-        margin: 20px auto; /* Center the box */
-        display: flex; /* Use Flexbox */
-        flex-direction: column; /* Arrange children vertically */
-        gap: 10px; /* Space between links */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
     }
     .tab-links{
         font-family: 16px;
