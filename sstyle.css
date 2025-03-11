@@ -13,7 +13,7 @@ body{
 }
 #header{
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background-image: url(images/background2.jpg);
     background-size: cover;
     background-position: center;
@@ -315,7 +315,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/Phone-background2.jpg);
+        background-image: url(images/Phone-background3.jpg);
     }
     .logo{
         margin-left: -40px;
