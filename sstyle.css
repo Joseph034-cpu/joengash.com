@@ -14,7 +14,7 @@ body{
 #header{
     width: 100%;
     height: 120vh;
-    background-image: url(images/background3.jpg);
+    background-image: url(images/ChatGPT.png);
     background-size: cover;
     background-position: center;
 }
@@ -315,7 +315,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/Phone-background3.jpg);
+        background-image: url(images/developer_illustration_portrait.png);
     }
     .logo{
         margin-left: -40px;
