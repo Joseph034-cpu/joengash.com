@@ -65,7 +65,6 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color: #1B3B6F;
 }
-
 .button {
     background-color: #1B3B6F;
     color: #ffffff;
@@ -75,10 +74,8 @@ nav ul li a:hover::after{
     font-weight: 500;
     transition: background-color 0.3s ease;
 }
-
 .button:hover {
-    background-color: #274C77;
-    
+    background-color: #274C77;   
 /*---------------about-------------*/
 #about{
     padding: 80px 0;
@@ -394,4 +391,5 @@ nav .fa-solid{
     margin-top: -40px;
     display: block;
 }
+
 
