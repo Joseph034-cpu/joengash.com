@@ -8,205 +8,386 @@
     <script src="https://kit.fontawesome.com/27c041fde7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/Presentation.jpg" class="logo">
-                <ul id="sidemenu">
-                    <div class="dark-box">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    </div>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <h1>Hi, I'm <strong style="color:#1B3B6F;">Joseph Ng'ang'a</strong></h1>
-                <h2>ICT Support Specialist & Web Developer</h2>
-                <p>I provide reliable IT support, configure networks, troubleshoot systems, and build clean, responsive websites for businesses and individuals.</p><br><br>
-                 <a href="#portfolio" class="button scrolly">View My Work</a>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
             </div>
-        </div>
-    </div>
-<!-------------about--------->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/web dev.jpg" alt="">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                 <p>I am an IT enthusiast with skills in web development, ICT support, and graphic design. I have experience building responsive websites using HTML, CSS, and JavaScript, as well as working with WordPress to create and manage dynamic websites.</p>
-                    <p>In addition to web development, I have hands-on experience in ICT support including Windows installation, LAN configuration, printer troubleshooting, and general software support. I enjoy solving technical problems and helping users work efficiently with technology.</p>
-                    <p>I am continuously improving my skills and looking for opportunities where I can contribute, grow, and gain more real-world experience in the IT field.</p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                    <div class="skills-grid">
+        </nav>
 
-                        <div class="skill-card">
-                            <h3>Web Development</h3>
-                            <ul>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript (Fundamentals)</li>
-                                <li>Responsive Web Design</li>
-                                <li>WordPress (Setup & Customization)</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill-card">
-                            <h3>ICT Support</h3>
-                            <ul>
-                                <li>Windows Installation & Configuration</li>
-                                <li>LAN Setup & Network Troubleshooting</li>
-                                <li>Printer Installation & Troubleshooting</li>
-                                <li>Software Installation & Maintenance</li>
-                                <li>Hardware Troubleshooting</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill-card">
-                            <h3>Graphic Design</h3>
-                            <ul>
-                                <li>Social Media Poster Design</li>
-                                <li>Business Flyers & Marketing Materials</li>
-                                <li>Canva Design</li>
-                                <li>Branding & Visual Content Creation</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill-card">
-                            <h3>Tools</h3>
-                            <ul>
-                                <li>Git & GitHub</li>
-                                <li>VS Code</li>
-                                <li>cPanel / Hosting Management</li>
-                                <li>Microsoft Office Suite</li>
-                            </ul>
-                        </div>
+        <!-- Hero Section -->
+        <section id="home">
+            <canvas id="tech-bg"></canvas>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="intro-text">Hello, I'm</p>
+                    <h1 class="hero-name">JOSEPH <span>NG'ANG'A</span></h1>
+                    <h2 class="hero-role"><span id="typing"></span></h2>
+                    <p class="hero-description">
+                        I engineer scalable digital systems, optimize IT infrastructure, and build high-performance web solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn-primary">View Projects</a>
+                        <a href="#contact" class="btn-outline">Hire Me</a>
                     </div>
                 </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span><b>June 2022 - June 2023</b></span><br>Web Development Training at NIBS</li>
-                                <li><span><b>June 2023 - June 2024</b></span><br>Networking & Computer Services Training</li>
-                                <li><span><b>Sep 2025 - Nov 2025</b></span><br>Graphic Design Online Course (Canva & Digital Posters)</li>
-                            </ul>
+            </div>
+        </section>
+
+
+<!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="fade-section">
+        <div class="about-container">
+
+            <!-- LEFT IMAGE -->
+            <div class="about-left">
+                <div class="about-image">
+                    <img src="images/web dev.jpg" alt="Joseph Ng'ang'a">
+                </div>
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="about-right">
+                <h2 class="section-title">About <span>Me</span></h2>
+
+                <p class="about-text">
+                    I am an IT enthusiast specializing in 
+                    <span>Web Development</span>, 
+                    <span>ICT Support</span>, and 
+                    <span>Graphic Design</span>. 
+                    I build responsive websites using HTML, CSS, and JavaScript 
+                    and work with WordPress to create and manage dynamic platforms.
+                </p>
+
+                <p class="about-text">
+                    I have hands-on experience in ICT support including Windows installation, 
+                    LAN configuration, printer troubleshooting, document scanner setup, 
+                    and general system maintenance. I enjoy solving technical problems 
+                    and improving operational efficiency through technology.
+                </p>
+
+                <!-- TAB BUTTONS -->
+                <div class="tab-titles">
+                    <button class="tab-links active-link"onclick="opentab('skills', this)">Skills</button>
+                    <button class="tab-links"onclick="opentab('education', this)">Education</button>
+                </div>
+
+                <!-- SKILLS TAB -->
+                <div class="tab-contents active-tab" id="skills">
+                    <div class="skills-grid">
+
+                        <!-- WEB DEV -->
+                        <div class="skill-card">
+                            <h3>Web Development</h3>
+
+                            <div class="progress-item">
+                                <span>HTML & CSS</span>
+                                <div class="progress-bar">
+                                    <div data-progress="90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item">
+                                <span>JavaScript</span>
+                                <div class="progress-bar">
+                                    <div data-progress="75%"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item">
+                                <span>WordPress</span>
+                                <div class="progress-bar">
+                                    <div data-progress="80%"></div>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- ICT SUPPORT -->
+                        <div class="skill-card">
+                            <h3>ICT Support</h3>
+
+                            <div class="progress-item">
+                                <span>System Installation</span>
+                                <div class="progress-bar">
+                                    <div data-progress="85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item">
+                                <span>Network Troubleshooting</span>
+                                <div class="progress-bar">
+                                    <div data-progress="80%"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item">
+                                <span>Hardware & Document Scanners</span>
+                                <div class="progress-bar">
+                                    <div data-progress="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GRAPHIC DESIGN -->
+                        <div class="skill-card">
+                            <h3>Graphic Design</h3>
+
+                            <div class="progress-item">
+                                <span>Social Media Design</span>
+                                <div class="progress-bar">
+                                    <div data-progress="85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item">
+                                <span>Branding Materials</span>
+                                <div class="progress-bar">
+                                    <div data-progress="75%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TOOLS -->
+                        <div class="skill-card">
+                            <h3>Tools</h3>
+
+                            <div class="progress-item">
+                                <span>Git & GitHub</span>
+                                <div class="progress-bar">
+                                    <div data-progress="70%"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item">
+                                <span>VS Code</span>
+                                <div class="progress-bar">
+                                    <div data-progress="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- EDUCATION TAB -->
+                <div class="tab-contents" id="education">
+                    <ul class="education-list">
+                        <li>
+                            <span>2022 – 2023</span>
+                            Web Development Training – NIBS
+                        </li>
+                        <li>
+                            <span>2023 – 2024</span>
+                            Networking & Computer Services Training
+                        </li>
+                        <li>
+                            <span>2025</span>
+                            Graphic Design Online Course
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
-    </div>
-</div>
-<!--------------services------------>
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title">My services</h1>
-        <div class="services-list">
-           <div>
-            <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>As a web designer, I specialize in creating visually appealing and user-friendly websites that 
-                    communicate certain messages. I use my training to craft websites that not only look great but 
-                    also perform efficiently across devices. My skills in HTML, CSS and design tools allow me to 
-                    come up with solutions to client needs.
-                </p>
-                <a href="#">Learn more</a>
-           </div> 
-           <div>
-            <i class="fa-brands fa-uncharted"></i>
-                <h2>Software design</h2>
-                <p>I am a software designer with a strong focus on creating users applications. I design softwares that 
-                    prioritizes usability, functionality, and user experiences. I ensure that my designs meet both user and 
-                    business needs, translating complex requirements into simple and effective solutions.
-                </p>
-                <a href="#">Learn more</a>
-           </div>
-           <div>
-            <i class="fa-solid fa-network-wired"></i>
-            <h2>Networking</h2>
-            <p>As a networking specialist, I deliver reliable and secure network solutions to meet the needs of a 
-                business. I ensure reliable connectivity and efficient data flow with expertise in network architecture 
-                and performance optimization.
-            </p>
-            <a href="#">Learn more</a>
-           </div>
+    </section>
+
+
+<!-------------- EXPERIENCE -------------->
+        <div id="experience">
+            <div class="container">
+                <h1 class="section-title">Experience</h1>
+
+                <div class="experience-list">
+
+                    <div class="experience-card fade-in">
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Front-End Web Development</h2>
+                        <p>
+                            Designed and developed responsive websites using HTML, CSS, and JavaScript. 
+                            Implemented animations, optimized performance, and ensured cross-browser compatibility.
+                        </p>
+                        <span>2022 - Present</span>
+                    </div>
+
+                    <div class="experience-card fade-in">
+                        <i class="fa-brands fa-wordpress"></i>
+                        <h2>WordPress Development</h2>
+                        <p>
+                            Built and customized WordPress websites including theme setup, plugin integration, 
+                            and SEO optimization for dynamic business platforms.
+                        </p>
+                        <span>2022 - Present</span>
+                    </div>
+
+                    <div class="experience-card fade-in">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <h2>Network Setup & Configuration</h2>
+                        <p>
+                            Configured LAN environments, managed routers and switches, 
+                            and resolved connectivity issues to maintain reliable office networks.
+                        </p>
+                        <span>2023 - Present</span>
+                    </div>
+
+                    <div class="experience-card fade-in">
+                        <i class="fa-solid fa-desktop"></i>
+                        <h2>ICT Support – System Maintenance</h2>
+                        <p>
+                            Installed Windows OS, configured printers and scanners (including document/MICR scanners), 
+                            performed software troubleshooting, and provided end-user technical support.
+                        </p>
+                        <span>2023 - Present</span>
+                    </div>
+
+                    <div class="experience-card fade-in">
+                        <i class="fa-solid fa-paintbrush"></i>
+                        <h2>Graphic Design & Branding</h2>
+                        <p>
+                            Designed 20+ marketing posters and digital campaigns using Canva, 
+                            focusing on branding consistency and visual engagement.
+                        </p>
+                        <span>Sep 2025 - Present</span>
+                    </div>
+
+                    <div class="experience-card fade-in">
+                        <i class="fa-solid fa-tools"></i>
+                        <h2>Technical Tools & Version Control</h2>
+                        <p>
+                            Used Git & GitHub for version control, VS Code for development workflow, 
+                            and deployed websites using modern hosting platforms.
+                        </p>
+                        <span>Ongoing</span>
+                    </div>
+
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+
+
 <!-----------portfolio----------->
 <div id="portfolio">
     <div class="container">
-        <h1 class="sub-title">My Work</h1>
+        <h1 class="section-title">My Work</h1>
+
         <div class="work-list">
             <div class="work">
-                <img src="images/work-1.png">
+                <img src="images/website ui mockup.jpg" alt="Website UI Mockup">
                 <div class="layer">
-                    <h3>Social media</h3>
-                    <p>Connect with my help on social media!
-                         Follow me for updates, exclusive content, and more.
-                          Click the icons below to stay in touch!</p>
+                    <h3>Website UI Mockup</h3>
+                    <p>Clean, modern interface design for desktop and mobile web apps.</p>
                     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
+
             <div class="work">
-                <img src="images/work-2.png">
+                <img src="images/WordPress Website.jpg" alt="WordPress Website">
                 <div class="layer">
-                    <h3>Software Development</h3>
-                    <p>I craft innovative software solutions tailored to your needs.
-                         From concept to deployment, my expertise drives your digital success!</p>
+                    <h3>WordPress Website</h3>
+                    <p>Custom WordPress site with theme customization and responsive layout.</p>
                     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
+
             <div class="work">
-                <img src="images/work-3.png">
+                <img src="images/Ecommerce website.jpg" alt="Ecommerce Website">
                 <div class="layer">
-                    <h3>Web design</h3>
-                    <p>Creating visually stunning and user-friendly websites
-                         that engage visitors and drive results.
-                          Let's bring your vision to life online!</p>
+                    <h3>Ecommerce Website</h3>
+                    <p>Optimized online store with clean UI and smooth checkout experience.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/IT Support.jpg" alt="IT Support">
+                <div class="layer">
+                    <h3>IT Support</h3>
+                    <p>Real-world ICT support projects including networks, printers, and systems setup.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/Canva Poster Design.jpg" alt="Canva Poster Design">
+                <div class="layer">
+                    <h3>Canva Poster Design</h3>
+                    <p>Creative social media and marketing posters with brand-focused designs.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/Mobile UI design.jpg" alt="Mobile UI Design">
+                <div class="layer">
+                    <h3>Mobile UI Design</h3>
+                    <p>User-friendly mobile app interfaces optimized for all screen sizes.</p>
                     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See more</a>
+
+         <a href="#contact" class="btn">Work With Me</a>
     </div>
 </div>
+
+
 <!----------contact-------->
-<div id="contact">
-    <div class="container">
-        <div class="row">
+<div id="contact" class="fade-section">
+    <div class="container contact-container">
+
+        <!-- Main heading -->
+        <div class="contact-main-heading fade-in">
+            <h1 class="section-title">Start a Project</h1>
+        </div>
+
+        <!-- Below heading: left and right columns -->
+        <div class="contact-columns fade-in">
+
+            <!-- Left column -->
             <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
+                <h2 class="contact-subheading">Let's Talk</h2>
+                 <p class="intro">I’m open to exciting opportunities, collaborations, or freelance projects. Reach out and let’s make something extraordinary together.</p>
+
                 <p><i class="fa-solid fa-paper-plane"></i>joengash650@gmail.com</p>
                 <p><i class="fa-solid fa-square-phone"></i>0795293001</p>
+                 <!-- Social links -->
                 <div class="social-icons">
-                    <a href=""><i class="fa-brands fa-square-whatsapp"></i></a>
-                    <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://wa.me/254795293001" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                    </a>
+                    <a href="https://instagram.com/jozz_joe" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@jozz_joe" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/joseph-nganga-339776328" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                 </div>
-                <a href="images/JOSEPH NG’ANG’A CV.pdf" download class="btn btn2">Download CV</a>
             </div>
+
+            <!-- Right column -->
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <button type="submit" class="btn btn2">Send Message</button>
                 </form>
                 <span id="msg"></span>
             </div>
+
         </div>
+
     </div>
-    <div class="copyright">
+
+    <div class="copyright fade-in">
         <p>Copyright @ Joseph <i class="fa-solid fa-heart"></i></p>
     </div>
 </div>
@@ -260,11 +441,267 @@
     })
   </script>
 
+   <script>
+// Tech vector background with mouse interaction
+const canvas = document.getElementById('tech-bg');
+const ctx = canvas.getContext('2d');
+let w, h;
+let nodes = [];
+let mouse = { x: null, y: null };
+
+function resizeCanvas() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+// Track mouse movement
+window.addEventListener('mousemove', (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+});
+window.addEventListener('mouseout', () => {
+    mouse.x = null;
+    mouse.y = null;
+});
+
+// Create nodes
+const NODE_COUNT = 60;
+for(let i = 0; i < NODE_COUNT; i++){
+    nodes.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        radius: Math.random() * 2 + 1
+    });
+}
+
+// Draw nodes and lines
+function animate() {
+    ctx.clearRect(0,0,w,h);
+
+    for(let i=0;i<nodes.length;i++){
+        let n1 = nodes[i];
+
+        // Draw lines between close nodes
+        for(let j=i+1;j<nodes.length;j++){
+            let n2 = nodes[j];
+            let dx = n1.x - n2.x;
+            let dy = n1.y - n2.y;
+            let dist = Math.sqrt(dx*dx + dy*dy);
+            if(dist < 120){
+                ctx.strokeStyle = 'rgba(59,130,246,'+(1 - dist/120)+')';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(n1.x, n1.y);
+                ctx.lineTo(n2.x, n2.y);
+                ctx.stroke();
+            }
+        }
+
+        // Draw node
+        ctx.fillStyle = '#3B82F6';
+        ctx.beginPath();
+        ctx.arc(n1.x, n1.y, n1.radius, 0, Math.PI*2);
+        ctx.fill();
+
+        // Move nodes
+        n1.x += n1.vx;
+        n1.y += n1.vy;
+
+        // Wrap edges
+        if(n1.x > w) n1.x = 0;
+        if(n1.x < 0) n1.x = w;
+        if(n1.y > h) n1.y = 0;
+        if(n1.y < 0) n1.y = h;
+
+        // React to mouse
+        if(mouse.x !== null && mouse.y !== null){
+            let dx = n1.x - mouse.x;
+            let dy = n1.y - mouse.y;
+            let dist = Math.sqrt(dx*dx + dy*dy);
+            if(dist < 100){
+                let angle = Math.atan2(dy, dx);
+                let force = (100 - dist) / 50;
+                n1.vx += Math.cos(angle) * force * 0.05;
+                n1.vy += Math.sin(angle) * force * 0.05;
+            }
+        }
+    }
+
+    requestAnimationFrame(animate);
+}
+animate();
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* ================= MOBILE MENU ================= */
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const icon = document.querySelector(".hamburger i");
+
+    if (hamburger && navLinks && icon) {
+        hamburger.addEventListener("click", function () {
+
+            navLinks.classList.toggle("active");
+
+            if (navLinks.classList.contains("active")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
+            } else {
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+            }
+        });
+    }
+
+    /* ================= SECTION TITLE ANIMATION ================= */
+    const sectionTitles = document.querySelectorAll(".section-title");
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    sectionTitles.forEach(function(title) {
+        observer.observe(title);
+    });
+
+});
+
+    /* ================= ACTIVE NAV LINK ON SCROLL ================= */
+    const allSections = document.querySelectorAll("#home, #about, #experience, #portfolio, #contact");
+    const navItems = document.querySelectorAll(".nav-links li a");
+
+    window.addEventListener("scroll", function () {
+        let current = "";
+
+        allSections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.offsetHeight;
+
+            if (window.pageYOffset >= sectionTop &&
+                window.pageYOffset < sectionTop + sectionHeight) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navItems.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
+        });
+    });
+
+    /* ================= TYPING EFFECT ================= */
+    const roles = [
+        "ICT Support Specialist & Web Developer",
+        "System Architect",
+        "Front-End Developer",
+        "Graphic Designer",
+        "Network Specialist"
+    ];
+
+    const typingEl = document.getElementById("typing");
+
+    let roleIndex = 0;
+    let charIndex = 0;
+    let typingSpeed = 80;
+    let erasingSpeed = 40;
+    let delayBetweenRoles = 1500;
+
+    function typeRole() {
+        if (!typingEl) return;
+
+        if (charIndex < roles[roleIndex].length) {
+            typingEl.textContent += roles[roleIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeRole, typingSpeed);
+        } else {
+            setTimeout(eraseRole, delayBetweenRoles);
+        }
+    }
+
+    function eraseRole() {
+        if (charIndex > 0) {
+            typingEl.textContent =
+                roles[roleIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(eraseRole, erasingSpeed);
+        } else {
+            roleIndex = (roleIndex + 1) % roles.length;
+            setTimeout(typeRole, typingSpeed);
+        }
+    }
+
+    if (roles.length) typeRole();
+
+    /* ================= ABOUT TABS ================= */
+    window.opentab = function (tabname, element) {
+        const tablinks = document.querySelectorAll(".tab-links");
+        const tabcontents = document.querySelectorAll(".tab-contents");
+
+        tablinks.forEach(link => link.classList.remove("active-link"));
+        tabcontents.forEach(content => content.classList.remove("active-tab"));
+
+        if (element) element.classList.add("active-link");
+        const activeTab = document.getElementById(tabname);
+        if (activeTab) activeTab.classList.add("active-tab");
+    };
+
+    /* ================= FADE-IN + PROGRESS BARS ================= */
+    const fadeSections = document.querySelectorAll(".fade-section");
+
+    window.addEventListener("scroll", function () {
+        fadeSections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const triggerPoint = window.innerHeight - 100;
+
+            if (sectionTop < triggerPoint) {
+                section.classList.add("show");
+
+                const bars = section.querySelectorAll(".progress-bar div");
+                bars.forEach(bar => {
+                    const progress = bar.getAttribute("data-progress");
+                    if (progress) {
+                        bar.style.width = progress;
+                    }
+                });
+            }
+        });
+    });
+
+</script>
+<script>
+/* ================= FADE-IN SCROLL ANIMATION ================= */
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+    threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+
+</script>
 </body>
 </html>
-
-
-
-
-
-
