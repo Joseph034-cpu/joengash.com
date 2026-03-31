@@ -716,6 +716,108 @@ nav ul li a.active {
     transform: translateY(-2px);
 }
 
+/* ================= PROJECT BUTTONS ================= */
+
+.project-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+     width: 100%;
+}
+
+/* MAIN BUTTON */
+.project-live-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+
+    padding: 15px 26px;
+     min-width: 140px;
+    border-radius: 30px;
+    background: #fff;
+    color: #1B3B6F;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    overflow: hidden;
+    width: auto !important;
+    height: auto !important;
+
+    animation: projectBounce 2s infinite;
+}
+
+/* Bounce Animation */
+@keyframes projectBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* SNAKE BORDER */
+.project-live-btn::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        90deg,
+        #00f0ff,
+        #3B82F6,
+        #a855f7,
+        #00f0ff
+    );
+
+    background-size: 300% 300%;
+    animation: projectSnake 3s linear infinite;
+
+    z-index: -2;
+}
+
+/* INNER BACKGROUND */
+.project-live-btn::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #fff;
+    border-radius: 30px;
+    z-index: -1;
+}
+
+/* Snake Animation */
+@keyframes projectSnake {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 300% 50%;
+    }
+}
+
+/* HOVER EFFECT */
+.project-live-btn:hover {
+    color: #fff;
+}
+
+.project-live-btn:hover::after {
+    background: #1B3B6F;
+}
+
+/* OPTIONAL: stronger glow */
+.project-live-btn::before {
+    box-shadow: 
+        0 0 10px #00f0ff,
+        0 0 20px rgba(59,130,246,0.6),
+        0 0 30px rgba(168,85,247,0.4);
+}
+
 /* See More Button */
 .btn {
     display: block;
